@@ -18,11 +18,12 @@ correct). Multiple Questions: Extend the program into a quiz that asks for the
 capitals of 10 European countries. Provide feedback for each question.
 
 '''
-# Asking the user a question
-answer = input("What is the capital of Oman? ")  # Prompting the user to answer
+# Ask the user a question about the capital of Oman
+answer = input("What is the capital of Oman? ")  # Prompt the user to enter an answer
 
-# Checking if the answer is correct
-if answer.lower() == "muscat":  # Converting the user's asnwer to lowercase and comparing it to "muscat"
-    print("Correct!")  # If the answer is correct, the code prints "Correct!"
+# Check if the answer is correct
+if answer.lower() == "muscat":  # Convert the answer to lowercase and compare it to "muscat"
+    print("Correct!")  # Print "Correct!" if the answer is right
 else:
-    print("Wrong answer.")   # If the answer is incorrect, the code prints "Wrong answer"
+    print("Wrong answer.")  # Print "Wrong answer" if the answer is incorrect
+
