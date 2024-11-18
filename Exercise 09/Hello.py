@@ -13,10 +13,11 @@ main()
 '''
 
 def hello():
-    print("Hello")  # Fill in this blank to print "Hello" to the console
+    print("Hello")  # Print "Hello" to the console
 
 def main():
-    hello()  # Fill in this blank to call the hello() function
+    hello()  # Call the hello() function to print the greeting
 
+# This checks if the script is being run directly (not imported)
 if __name__ == "__main__":
-    main()  # This calls main() only if the script is run directly
+    main()  # Call main() only if the script is run directly
