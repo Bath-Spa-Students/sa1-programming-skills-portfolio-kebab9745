@@ -19,37 +19,37 @@ How can you prevent this issue?
 
 '''
 
-# Get user input for full name and store it in the variable 'name'
+# Ask the user for their full name and save it in 'name'
 name = input("Enter your full name: ")
 
-# Get user input for hometown and store it in the variable 'hometown'
+# Ask the user for their hometown and save it in 'hometown'
 hometown = input("Enter your hometown: ")
 
-# Start a loop to get valid age from the user
+# Keep asking the user for their age until they enter a valid number
 while True:
     try:
-        # Prompt user to enter their age, convert it to an integer, and assign it to 'age'
+        # Prompt for age, then try to convert it to an integer and save it in 'age'
         age = int(input("Enter your age: "))
         
-        # If conversion is successful, exit the loop
+        # If no error occurs, break out of the loop
         break  
     except ValueError:
-        # If there was an error (non-numeric value), print a message asking for numerical value 
+        # If there's an error, let the user know they need to enter a number
         print("Please enter a numerical value for age.")
 
-# Create a dictionary called bio_data with keys "Name", "Hometown", and "Age"
+# Create a dictionary called bio_data to store the user's name, hometown, and age
 bio_data = {
     "Name": name,
     "Hometown": hometown,
     
-    # Convert 'age' back into string format before storing as it's easier when printing later.
+    # Convert age to a string so it prints nicely later on
     "Age": str(age)  
 }
 
-# Print header line indicating that biography information follows
+# Print a heading for the user's bio information
 print("\nYour Biography:")
 
-# Loop through each key-value pair in bio_data dictionary 
+# Go through each piece of info in bio_data and print it out
 for key, value in bio_data.items():
-     # Print each piece of data on its own line using formatted strings (f-strings)
-     print(f"{key}: {value}")
+    # Use an f-string to format each line of the bio
+    print(f"{key}: {value}")
