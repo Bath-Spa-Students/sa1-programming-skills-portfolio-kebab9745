@@ -15,25 +15,25 @@ main function.
 
 '''
 
-# Function to check if a number is even or odd
+# Define a function to check if a number is even or odd
 def check_even_or_odd(number):
-    # Check if the number is even
-    if number % 2 == 0:  # If the remainder when divided by 2 is 0, it's even
-        return f"The number {number} is even."  # Return a message indicating the number is even
+    # See if the number is even
+    if number % 2 == 0:  # If dividing by 2 leaves no remainder, it's even
+        return f"The number {number} is even."  # Return a message saying it's even
     else:
-        return f"The number {number} is odd."  # Otherwise, return a message indicating the number is odd
+        return f"The number {number} is odd."  # Otherwise, return a message saying it's odd
 
 # Main function to run the program
 def main():
-    # Ask the user for a number
-    user_number = int(input("Enter a number: "))  # Convert user input to an integer
+    # Prompt the user to enter a number
+    user_number = int(input("Enter a number: "))  # Get input and convert it to an integer
     
-    # Call the function to determine if the number is even or odd
+    # Call the function to check if the number is even or odd
     result_message = check_even_or_odd(user_number)  # Pass the number to the function
     
-    # Print the message returned by the function
-    print(result_message)  # Display whether the number is even or odd
+    # Print the result from the function
+    print(result_message)  # Show if the number is even or odd
 
-# Only run the main function if the script is executed directly
+# Run the main function only if the script is executed directly
 if __name__ == "__main__":
-    main()  # Run the main function to start the program
+    main()  # Start the program by calling main()
