@@ -17,35 +17,33 @@ have been alerted.
 
 '''
 
-# Define the correct password
-correct_password = "12345"  # Set the correct password that the user needs to enter
+# Set the correct password
+correct_password = "12345"  # The password the user needs to enter
 
-# Define the maximum number of attempts allowed
-max_attempts = 5  # Set the maximum attempts the user is allowed to try
+# Set the maximum number of allowed attempts
+max_attempts = 5  # Limit of tries the user can make
 
-# Initialize the number of attempts
-attempts = 0  # Start the count of attempts at 0, since no attempts have been made yet
+# Track the number of attempts the user has made
+attempts = 0  # Start with zero attempts
 
-# Begin a loop that will continue as long as the number of attempts is less than max_attempts
+# Start a loop to let the user keep trying as long as they have attempts left
 while attempts < max_attempts:
-    # Ask the user for the password
-    entered_password = input("Enter the password: ")  # Prompt the user to enter the password
+    # Ask the user to enter the password
+    entered_password = input("Enter the password: ")  # Prompt the user
     
-    # Check if the entered password is correct
-    if entered_password == correct_password:  # Compare the entered password with the correct password
-        print("Password accepted! Access granted.")  # If correct, print success message
-        break  # Exit the loop, as the password was correct
+    # Check if the entered password matches the correct one
+    if entered_password == correct_password:  # Compare passwords
+        print("Password accepted! Access granted.")  # If correct, grant access
+        break  # Exit the loop since the password is correct
     else:
-        # If the password is incorrect, increment the attempts counter by 1
-        attempts += 1  # Increase the attempts count by 1 for each incorrect entry
+        # If the password is wrong, add 1 to the attempt count
+        attempts += 1  # Increase attempts by 1
         
-        # Calculate the remaining attempts
-        remaining_attempts = max_attempts - attempts  # Subtract the current attempts from max_attempts
+        # Calculate how many attempts are left
+        remaining_attempts = max_attempts - attempts  # Figure out the remaining tries
         
-        # Check if there are any remaining attempts
-        if remaining_attempts > 0:  # If the user has attempts left
-            # Inform the user of the incorrect password and remaining attempts
+        # Let the user know how many tries they have left, or alert them if they've run out
+        if remaining_attempts > 0:  # If they still have attempts
             print(f"Incorrect password. You have {remaining_attempts} attempts left.")
         else:
-            # If no attempts are left, alert the user that authorities have been notified
-            print("Incorrect password. Authorities have been alerted.")
+            print("Incorrect password. Authorities have been alerted.")  # No attempts left
