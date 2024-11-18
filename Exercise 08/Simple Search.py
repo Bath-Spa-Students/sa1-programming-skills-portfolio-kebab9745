@@ -11,24 +11,25 @@ Optional Requirements:
 
 '''
 
-# Initialize the list of names
+# List of names to search through
 names = ["Jake", "Zac", "Ian", "Ron", "Sam", "Dave"]
 
-# Search for a specific name 
-search_name = "Sam"  # Define the name we are looking for
+# Name we want to search for
+search_name = "Sam"  # The name we're looking for
 
 # Check if "Sam" is in the list
 if search_name in names:
-    print(f"{search_name} found in the list!")  # If "Sam" is in the list it will print a success message
+    print(f"{search_name} found in the list!")  # Print a message if "Sam" is found
 else:
-    print(f"{search_name} not found in the list.")  # If "Sam" is not in the list, print a failure message
+    print(f"{search_name} not found in the list.")  # Print a message if "Sam" isn't found
 
-# Optional Requirement: Allow the user to input a search term
-# Ask the user to enter a name to search for
-user_search = input("Enter the name you want to search for: ")  # Take user input for the search term
+# Optional: Let the user enter a name to search for
+# Prompt the user to enter a name they want to search for
+user_search = input("Enter the name you want to search for: ")  # Get input from the user
 
-# Implement the search functionality with the user's input
-if user_search in names:  # Check if the user's input is in the list
-    print(f"{user_search} found in the list!")  # If found, print success message
+# Check if the user's input is in the list
+if user_search in names:  # See if the name the user entered is in the list
+    print(f"{user_search} found in the list!")  # Print a message if the name is found
 else:
-    print(f"{user_search} not found in the list.")  # If not found, print failure message
+    print(f"{user_search} not found in the list.")  # Print a message if the name isn't found
+
